@@ -1,0 +1,23 @@
+ReplicatedStorage es almacenamiento, objetos y configuraciones del juego que el cliente puede acceder.
+
+ReplicatedFirst es basicamente ReplicatedStorage, pero que se replica a la primera, antes de 
+replicarse con el almacenamiento. Puede servir por si es un juego que cuesta bastante procesar,
+y para optimizar y hacer que ciertas cosas carguen primero antes de hacer que todo el juego cargue.
+
+ServerScriptService sirve para guardar todos los scripts que hacen el juego funcionar.
+
+StarterGui sirve para agregar interfaces en el juego, las primeras interfaces que aparecen.
+
+StarterPack sirve para agregar cosas con las que el jugador va a iniciar en el juego, o que
+va a tener apenas su personaje cargue dentro del juego tal como herramientas, armas, etc.
+
+StarterPlayer es lo mismo que es StarterPack, solo que sirve para insertar los scripts
+locales o LocalScripts que va a tener un jugador al iniciar el juego, como ciertas 
+modificaciones a su personaje, etc.
+
+SoundService sirve para almacenar todo el sonido que va a tener tu juego.
+
+NOTA IMPORTANTE: SIEMPRE utilizar :GetService() para obtener cualquier servicio del
+juego, esto nos ayuda a esperar que el juego en totalidad cargue, para asi poder utilizar sus
+servicios sin evitar errores, ya que si accedemos algun servicio como "game.ReplicatedStorage"
+puede causar problemas y hacer que el juego se rompa o tenga un error critico.
